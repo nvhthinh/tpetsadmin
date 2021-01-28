@@ -1,14 +1,23 @@
 // create.component.js
 import React, { Component } from 'react';
-
-// import Pr2 from "../../lib/pic/pr2.jpg";
-
-
+import $ from 'jquery';
 export default class Users extends Component {
+  componentDidMount() {
+    //initialize datatable
+    $(document).ready(function () {
+        $('#dataTable').DataTable({
+          "aLengthMenu": [[15, 30, 50, 75, -1], [ 15, 30, 50, 75, "All"]],
+          "iDisplayLength": 15
+      });
+    });
+  }
     render() {
         return (
             <div className="container-fluid">
-              <style dangerouslySetInnerHTML={{__html: "\n        .devfake {\n            display: none !important;\n        }\n    " }} />
+              <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+              <script src="https://cdn.datatables.net/1.10.23/js/dataTables.foundation.min.js"></script>
+
+              {/* <style dangerouslySetInnerHTML={{__html: "\n        .devfake {\n            display: none !important;\n        }\n    " }} /> */}
         {/* DataTales Example */}
         <div className="card shadow mb-4">
           <div className="card-body">
@@ -28,12 +37,89 @@ export default class Users extends Component {
                     <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Trang Trang</td>
                     <td>U1234568675</td>
                     <td>038456789</td>
+                    <td>Trang123@gmail.com</td>
+                    <td>06/06/2020</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Anh Thư</td>
+                    <td>U1234522673</td>
+                    <td>038456789</td>
+                    <td>Anhthu222@gmail.com</td>
+                    <td>25/04/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Kiều Trang</td>
+                    <td>U1234568671</td>
+                    <td>038456789</td>
+                    <td>bnbnb@gmail.com</td>
+                    <td>10/04/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Hoàn Thịnh</td>
+                    <td>U1234568623</td>
+                    <td>038456789</td>
+                    <td>esdddde@gmail.com</td>
+                    <td>25/12/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Thủy Tiên</td>
+                    <td>U1234568233</td>
+                    <td>038456789</td>
+                    <td>tienancuttt@gmail.com</td>
+                    <td>25/04/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Sơn Tùng</td>
+                    <td>U1234568556</td>
+                    <td>038456789</td>
+                    <td>ghhgghhh@gmail.com</td>
+                    <td>25/04/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Hải Tú</td>
+                    <td>U1234568767</td>
+                    <td>038456789</td>
+                    <td>sdfsdfsdfsdf@gmail.com</td>
+                    <td>25/04/2020</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Bảo Trâm</td>
+                    <td>U1234568997</td>
+                    <td>038456789</td>
+                    <td>sdfsdfbb@gmail.com</td>
+                    <td>25/04/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Thảo Nguyên</td>
+                    <td>U12345645566</td>
+                    <td>038456789</td>
+                    <td>abcd@gmail.com</td>
+                    <td>21/11/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Xoài</td>
+                    <td>U1234568670</td>
+                    <td>038456789</td>
+                    <td>example@gmail.com</td>
+                    <td>25/07/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Trang Trang</td>
+                    <td>U1234568675</td>
+                    <td>038456789</td>
+                    <td>kieuththth@gmail.com</td>
+                    <td>13/04/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Trang Trang</td>
+                    <td>U1234566677</td>
+                    <td>038456789</td>
                     <td>example@gmail.com</td>
                     <td>25/04/2011</td>
                   </tr>
                   <tr>
                     <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Trang Trang</td>
-                    <td>U1234568675</td>
+                    <td>U1234568660</td>
                     <td>038456789</td>
                     <td>example@gmail.com</td>
                     <td>25/04/2011</td>
@@ -42,75 +128,89 @@ export default class Users extends Component {
                     <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Trang Trang</td>
                     <td>U1234568675</td>
                     <td>038456789</td>
-                    <td>example@gmail.com</td>
+                    <td>Trang123@gmail.com</td>
+                    <td>06/06/2020</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Anh Thư</td>
+                    <td>U1234522673</td>
+                    <td>038456789</td>
+                    <td>Anhthu222@gmail.com</td>
                     <td>25/04/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Kiều Trang</td>
+                    <td>U1234568671</td>
+                    <td>038456789</td>
+                    <td>bnbnb@gmail.com</td>
+                    <td>10/04/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Hoàn Thịnh</td>
+                    <td>U1234568623</td>
+                    <td>038456789</td>
+                    <td>esdddde@gmail.com</td>
+                    <td>25/12/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Thủy Tiên</td>
+                    <td>U1234568233</td>
+                    <td>038456789</td>
+                    <td>tienancuttt@gmail.com</td>
+                    <td>25/04/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Sơn Tùng</td>
+                    <td>U1234568556</td>
+                    <td>038456789</td>
+                    <td>ghhgghhh@gmail.com</td>
+                    <td>25/04/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Hải Tú</td>
+                    <td>U1234568767</td>
+                    <td>038456789</td>
+                    <td>sdfsdfsdfsdf@gmail.com</td>
+                    <td>25/04/2020</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Bảo Trâm</td>
+                    <td>U1234568997</td>
+                    <td>038456789</td>
+                    <td>sdfsdfbb@gmail.com</td>
+                    <td>25/04/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Thảo Nguyên</td>
+                    <td>U12345645566</td>
+                    <td>038456789</td>
+                    <td>abcd@gmail.com</td>
+                    <td>21/11/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Xoài</td>
+                    <td>U1234568670</td>
+                    <td>038456789</td>
+                    <td>example@gmail.com</td>
+                    <td>25/07/2011</td>
                   </tr>
                   <tr>
                     <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Trang Trang</td>
                     <td>U1234568675</td>
+                    <td>038456789</td>
+                    <td>kieuththth@gmail.com</td>
+                    <td>13/04/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Trang Trang</td>
+                    <td>U1234566677</td>
                     <td>038456789</td>
                     <td>example@gmail.com</td>
                     <td>25/04/2011</td>
                   </tr>
                   <tr>
                     <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Trang Trang</td>
-                    <td>U1234568675</td>
-                    <td>038456789</td>
-                    <td>example@gmail.com</td>
-                    <td>25/04/2011</td>
-                  </tr>
-                  <tr>
-                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Trang Trang</td>
-                    <td>U1234568675</td>
-                    <td>038456789</td>
-                    <td>example@gmail.com</td>
-                    <td>25/04/2011</td>
-                  </tr>
-                  <tr>
-                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Trang Trang</td>
-                    <td>U1234568675</td>
-                    <td>038456789</td>
-                    <td>example@gmail.com</td>
-                    <td>25/04/2011</td>
-                  </tr>
-                  <tr>
-                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Trang Trang</td>
-                    <td>U1234568675</td>
-                    <td>038456789</td>
-                    <td>example@gmail.com</td>
-                    <td>25/04/2011</td>
-                  </tr>
-                  <tr>
-                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Trang Trang</td>
-                    <td>U1234568675</td>
-                    <td>038456789</td>
-                    <td>example@gmail.com</td>
-                    <td>25/04/2011</td>
-                  </tr>
-                  <tr>
-                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Trang Trang</td>
-                    <td>U1234568675</td>
-                    <td>038456789</td>
-                    <td>example@gmail.com</td>
-                    <td>25/04/2011</td>
-                  </tr>
-                  <tr>
-                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Trang Trang</td>
-                    <td>U1234568675</td>
-                    <td>038456789</td>
-                    <td>example@gmail.com</td>
-                    <td>25/04/2011</td>
-                  </tr>
-                  <tr>
-                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Trang Trang</td>
-                    <td>U1234568675</td>
-                    <td>038456789</td>
-                    <td>example@gmail.com</td>
-                    <td>25/04/2011</td>
-                  </tr>
-                  <tr>
-                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Trang Trang</td>
-                    <td>U1234568675</td>
+                    <td>U1234568660</td>
                     <td>038456789</td>
                     <td>example@gmail.com</td>
                     <td>25/04/2011</td>
@@ -175,6 +275,7 @@ export default class Users extends Component {
             </div>
           </div>
         </div>
+        
       </div>
         )
     }

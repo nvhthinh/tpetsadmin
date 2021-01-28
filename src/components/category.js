@@ -1,14 +1,20 @@
 // create.component.js
 import React, { Component } from 'react';
-
-// import Pr2 from "../../lib/pic/pr2.jpg";
-
-
+import $ from 'jquery';
 export default class Categoryx extends Component {
+  componentDidMount() {
+    //initialize datatable
+    $(document).ready(function () {
+        $('#dataTable').DataTable({
+          "aLengthMenu": [[15, 30, 50, 75, -1], [ 15, 30, 50, 75, "All"]],
+          "iDisplayLength": 15
+      });
+    });
+  }
     render() {
         return (
             <div className="container-fluid">
-              <style dangerouslySetInnerHTML={{__html: "\n        .devfake {\n            display: none !important;\n        }\n    " }} />
+              {/* <style dangerouslySetInnerHTML={{__html: "\n        .devfake {\n            display: none !important;\n        }\n    " }} /> */}
         {/* DataTales Example */}
         <div className="card shadow mb-4">
           <div className="card-body">
@@ -23,81 +29,133 @@ export default class Categoryx extends Component {
                 </thead>
                 <tbody>
                   <tr>
-                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Thức
-                      ăn cho mèo</td>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Hạt Khô ME-O</td>
+                    <td>Là thức ăn được làm từ...</td>
+                    <td>25/04/2020</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Dây xích</td>
+                    <td>Dành cho bé từ 1 tuổi...</td>
+                    <td>25/03/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Áo sơ mi</td>
+                    <td>Được làm từ chất liệu thoáng mát...</td>
+                    <td>21/04/2020</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Pate Whisscat</td>
+                    <td>Tổng hợp từ các dinh dưỡng từ cá biển...</td>
+                    <td>25/04/2020</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Thuốc nhỏ mắt</td>
+                    <td>Chữa trị chứng đỏ mắt...</td>
+                    <td>25/04/2012</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Lược chải Lông</td>
+                    <td>Làm bằng răng chải tốt, không gãy...</td>
+                    <td>25/04/2020</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Cát đen nhật</td>
+                    <td>Không mùi. vón cục tốt...</td>
+                    <td>25/04/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Váy tiểu thư</td>
+                    <td>Chất liệu thoáng mát...</td>
+                    <td>25/04/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Tai thỏ</td>
+                    <td>Cute, lạc lối dành cho bé...</td>
+                    <td>25/04/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Hạt Casrang</td>
+                    <td>Là thức ăn được làm từ cá ngừ...</td>
+                    <td>21/04/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Bình nước</td>
+                    <td>Có dung tích hơn 500ml...</td>
+                    <td>25/04/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Quả bóng</td>
                     <td>Là thức ăn được làm từ...</td>
                     <td>25/04/2011</td>
                   </tr>
                   <tr>
-                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Thức
-                      ăn cho mèo</td>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Cần câu trêu mèo</td>
+                    <td>Trò chơi tương tác cùng ...</td>
+                    <td>25/04/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Hạt Khô ME-O</td>
+                    <td>Là thức ăn được làm từ...</td>
+                    <td>25/04/2020</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Dây xích</td>
+                    <td>Dành cho bé từ 1 tuổi...</td>
+                    <td>25/03/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Áo sơ mi</td>
+                    <td>Được làm từ chất liệu thoáng mát...</td>
+                    <td>21/04/2020</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Pate Whisscat</td>
+                    <td>Tổng hợp từ các dinh dưỡng từ cá biển...</td>
+                    <td>25/04/2020</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Thuốc nhỏ mắt</td>
+                    <td>Chữa trị chứng đỏ mắt...</td>
+                    <td>25/04/2012</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Lược chải Lông</td>
+                    <td>Làm bằng răng chải tốt, không gãy...</td>
+                    <td>25/04/2020</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Cát đen nhật</td>
+                    <td>Không mùi. vón cục tốt...</td>
+                    <td>25/04/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Váy tiểu thư</td>
+                    <td>Chất liệu thoáng mát...</td>
+                    <td>25/04/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Tai thỏ</td>
+                    <td>Cute, lạc lối dành cho bé...</td>
+                    <td>25/04/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Hạt Casrang</td>
+                    <td>Là thức ăn được làm từ cá ngừ...</td>
+                    <td>21/04/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Bình nước</td>
+                    <td>Có dung tích hơn 500ml...</td>
+                    <td>25/04/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Quả bóng</td>
                     <td>Là thức ăn được làm từ...</td>
                     <td>25/04/2011</td>
                   </tr>
                   <tr>
-                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Thức
-                      ăn cho mèo</td>
-                    <td>Là thức ăn được làm từ...</td>
-                    <td>25/04/2011</td>
-                  </tr>
-                  <tr>
-                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Thức
-                      ăn cho mèo</td>
-                    <td>Là thức ăn được làm từ...</td>
-                    <td>25/04/2011</td>
-                  </tr>
-                  <tr>
-                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Thức
-                      ăn cho mèo</td>
-                    <td>Là thức ăn được làm từ...</td>
-                    <td>25/04/2011</td>
-                  </tr>
-                  <tr>
-                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Thức
-                      ăn cho mèo</td>
-                    <td>Là thức ăn được làm từ...</td>
-                    <td>25/04/2011</td>
-                  </tr>
-                  <tr>
-                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Thức
-                      ăn cho mèo</td>
-                    <td>Là thức ăn được làm từ...</td>
-                    <td>25/04/2011</td>
-                  </tr>
-                  <tr>
-                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Thức
-                      ăn cho mèo</td>
-                    <td>Là thức ăn được làm từ...</td>
-                    <td>25/04/2011</td>
-                  </tr>
-                  <tr>
-                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Thức
-                      ăn cho mèo</td>
-                    <td>Là thức ăn được làm từ...</td>
-                    <td>25/04/2011</td>
-                  </tr>
-                  <tr>
-                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Thức
-                      ăn cho mèo</td>
-                    <td>Là thức ăn được làm từ...</td>
-                    <td>25/04/2011</td>
-                  </tr>
-                  <tr>
-                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Thức
-                      ăn cho mèo</td>
-                    <td>Là thức ăn được làm từ...</td>
-                    <td>25/04/2011</td>
-                  </tr>
-                  <tr>
-                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Thức
-                      ăn cho mèo</td>
-                    <td>Là thức ăn được làm từ...</td>
-                    <td>25/04/2011</td>
-                  </tr>
-                  <tr>
-                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Thức
-                      ăn cho mèo</td>
-                    <td>Là thức ăn được làm từ...</td>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Cần câu trêu mèo</td>
+                    <td>Trò chơi tương tác cùng ...</td>
                     <td>25/04/2011</td>
                   </tr>
                 </tbody>

@@ -3,10 +3,18 @@ import logo from './logo.svg';
 
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
 
+//Bootstrap and jQuery libraries
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'jquery/dist/jquery.min.js';
+
+//Datatable Modules
+import "datatables.net-dt/js/dataTables.dataTables"
+import "datatables.net-dt/css/jquery.dataTables.min.css"
+import $ from 'jquery'; 
+
 import Form from './components/common/form'
 
 import Login from './components/login'
-
 
 function App() {
     return (

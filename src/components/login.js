@@ -8,7 +8,8 @@ export default class Login extends Component {
     render() {
         return (
             <div className="container">
-              <style dangerouslySetInnerHTML={{__html: "\n        .devfake {\n            display: none !important;\n        }\n    " }} />
+              {/* <style dangerouslySetInnerHTML={{__html: "\n        .devfake {\n            display: none !important;\n        }\n    " }} /> */}
+              <style dangerouslySetInnerHTML={{__html: "\n        #root {\n            display: flex !important;\n        }\n    #wrapper {\n            display: none !important;\n        }\n    " }} />
               <style dangerouslySetInnerHTML={{__html: "\n        .bg_login {\n        background-color: #4e73df;\n        background-image: linear-gradient(180deg,#4e73df 10%,#224abe 100%);\n        background-size: cover;\n        }\n    " }} />
         {/* Outer Row */}
         <div className="row justify-content-center">

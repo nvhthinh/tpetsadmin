@@ -1,14 +1,20 @@
 // create.component.js
 import React, { Component } from 'react';
-
-// import Pr2 from "../../lib/pic/pr2.jpg";
-
-
+import $ from 'jquery';
 export default class Products extends Component {
+  componentDidMount() {
+    //initialize datatable
+    $(document).ready(function () {
+        $('#dataTable').DataTable({
+          "aLengthMenu": [[15, 30, 50, 75, -1], [ 15, 30, 50, 75, "All"]],
+          "iDisplayLength": 15
+      });
+    });
+  }
     render() {
         return (
             <div className="container-fluid">
-              <style dangerouslySetInnerHTML={{__html: "\n        .devfake {\n            display: none !important;\n        }\n    " }} />
+              {/* <style dangerouslySetInnerHTML={{__html: "\n        .devfake {\n            display: none !important;\n        }\n    " }} /> */}
         {/* DataTales Example */}
         <div className="card shadow mb-4">
           <div className="card-body">
@@ -24,80 +30,234 @@ export default class Products extends Component {
                 </thead>
                 <tbody>
                   <tr>
-                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Cám cá
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Hạt khô ME-O
                     </td>
-                    <td>Thực phẩm cho mèo</td>
-                    <td>999.000đ</td>
+                    <td>Đồ ăn</td>
+                    <td>99.000đ</td>
                     <td>25/04/2011</td>
                   </tr>
                   <tr>
-                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Cám cá
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Túi vận chuyển
                     </td>
-                    <td>Thực phẩm cho mèo</td>
-                    <td>999.000đ</td>
+                    <td>Dụng cụ</td>
+                    <td>120.000đ</td>
                     <td>25/04/2011</td>
                   </tr>
                   <tr>
-                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Cám cá
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Pate 
                     </td>
-                    <td>Thực phẩm cho mèo</td>
-                    <td>999.000đ</td>
+                    <td>Đồ ăn</td>
+                    <td>20.000đ</td>
                     <td>25/04/2011</td>
                   </tr>
                   <tr>
-                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Cám cá
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Váy công chúa size M
                     </td>
-                    <td>Thực phẩm cho mèo</td>
-                    <td>999.000đ</td>
+                    <td>Trang phục</td>
+                    <td>74.000đ</td>
                     <td>25/04/2011</td>
                   </tr>
                   <tr>
-                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Cám cá
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Cặp thủy thủ
                     </td>
-                    <td>Thực phẩm cho mèo</td>
-                    <td>999.000đ</td>
+                    <td>Dụng cụ</td>
+                    <td>91.000đ</td>
                     <td>25/04/2011</td>
                   </tr>
                   <tr>
-                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Cám cá
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Sữa 
                     </td>
-                    <td>Thực phẩm cho mèo</td>
-                    <td>999.000đ</td>
+                    <td>Thực phẩm </td>
+                    <td>57.000đ</td>
                     <td>25/04/2011</td>
                   </tr>
                   <tr>
-                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Cám cá
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Thuốc nhỏ mẳt
                     </td>
-                    <td>Thực phẩm cho mèo</td>
-                    <td>999.000đ</td>
+                    <td>Thực phẩm</td>
+                    <td>10.000đ</td>
                     <td>25/04/2011</td>
                   </tr>
                   <tr>
-                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Cám cá
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Vòng cổ trái tim
                     </td>
-                    <td>Thực phẩm cho mèo</td>
-                    <td>999.000đ</td>
+                    <td>Phụ kiện</td>
+                    <td>93.000đ</td>
                     <td>25/04/2011</td>
                   </tr>
                   <tr>
-                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Cám cá
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Dây xích con ong
                     </td>
-                    <td>Thực phẩm cho mèo</td>
-                    <td>999.000đ</td>
+                    <td>Phụ kiện</td>
+                    <td>94.000đ</td>
                     <td>25/04/2011</td>
                   </tr>
                   <tr>
-                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Cám cá
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Cát đen nhật
                     </td>
-                    <td>Thực phẩm cho mèo</td>
-                    <td>999.000đ</td>
+                    <td>Thực phẩm</td>
+                    <td>132.000đ</td>
                     <td>25/04/2011</td>
                   </tr>
                   <tr>
-                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Cám cá
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Royal cabin
                     </td>
-                    <td>Thực phẩm cho mèo</td>
-                    <td>999.000đ</td>
+                    <td>Đồ ăn</td>
+                    <td>334.000đ</td>
+                    <td>25/04/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Hạt khô ME-O
+                    </td>
+                    <td>Đồ ăn</td>
+                    <td>99.000đ</td>
+                    <td>25/04/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Túi vận chuyển
+                    </td>
+                    <td>Dụng cụ</td>
+                    <td>120.000đ</td>
+                    <td>25/04/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Pate 
+                    </td>
+                    <td>Đồ ăn</td>
+                    <td>20.000đ</td>
+                    <td>25/04/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Váy công chúa size M
+                    </td>
+                    <td>Trang phục</td>
+                    <td>74.000đ</td>
+                    <td>25/04/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Cặp thủy thủ
+                    </td>
+                    <td>Dụng cụ</td>
+                    <td>91.000đ</td>
+                    <td>25/04/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Sữa 
+                    </td>
+                    <td>Thực phẩm </td>
+                    <td>57.000đ</td>
+                    <td>25/04/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Thuốc nhỏ mẳt
+                    </td>
+                    <td>Thực phẩm</td>
+                    <td>10.000đ</td>
+                    <td>25/04/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Vòng cổ trái tim
+                    </td>
+                    <td>Phụ kiện</td>
+                    <td>93.000đ</td>
+                    <td>25/04/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Dây xích con ong
+                    </td>
+                    <td>Phụ kiện</td>
+                    <td>94.000đ</td>
+                    <td>25/04/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Cát đen nhật
+                    </td>
+                    <td>Thực phẩm</td>
+                    <td>132.000đ</td>
+                    <td>25/04/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Royal cabin
+                    </td>
+                    <td>Đồ ăn</td>
+                    <td>334.000đ</td>
+                    <td>25/04/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Hạt khô ME-O
+                    </td>
+                    <td>Đồ ăn</td>
+                    <td>99.000đ</td>
+                    <td>25/04/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Túi vận chuyển
+                    </td>
+                    <td>Dụng cụ</td>
+                    <td>120.000đ</td>
+                    <td>25/04/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Pate 
+                    </td>
+                    <td>Đồ ăn</td>
+                    <td>20.000đ</td>
+                    <td>25/04/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Váy công chúa size M
+                    </td>
+                    <td>Trang phục</td>
+                    <td>74.000đ</td>
+                    <td>25/04/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Cặp thủy thủ
+                    </td>
+                    <td>Dụng cụ</td>
+                    <td>91.000đ</td>
+                    <td>25/04/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Sữa 
+                    </td>
+                    <td>Thực phẩm </td>
+                    <td>57.000đ</td>
+                    <td>25/04/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Thuốc nhỏ mẳt
+                    </td>
+                    <td>Thực phẩm</td>
+                    <td>10.000đ</td>
+                    <td>25/04/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Vòng cổ trái tim
+                    </td>
+                    <td>Phụ kiện</td>
+                    <td>93.000đ</td>
+                    <td>25/04/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Dây xích con ong
+                    </td>
+                    <td>Phụ kiện</td>
+                    <td>94.000đ</td>
+                    <td>25/04/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Cát đen nhật
+                    </td>
+                    <td>Thực phẩm</td>
+                    <td>132.000đ</td>
+                    <td>25/04/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Royal cabin
+                    </td>
+                    <td>Đồ ăn.</td>
+                    <td>334.000đ</td>
                     <td>25/04/2011</td>
                   </tr>
                 </tbody>

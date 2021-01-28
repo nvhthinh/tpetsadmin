@@ -10756,7 +10756,7 @@
                                             height: 4rem;
                                             text-decoration: none;
                                             font-size: 1rem;
-                                            font-weight: 800;
+                                            font-weight: 600;
                                             padding: 1.5rem 1rem;
                                             text-align: center;
                                             letter-spacing: 0.05rem;
@@ -11638,7 +11638,7 @@
                                         }
                                         
                                         .main_item {
-                                            font-weight: 700;
+                                            font-weight: 600;
                                             cursor: pointer;
                                         }
                                         
@@ -11657,4 +11657,17 @@
                                             font-weight: bold;
                                             vertical-align: text-top;
                                             cursor: pointer;
+                                        }
+                                        /* for table */
+                                        .table {
+                                            color: #3A3B3F!important;
+                                        }
+                                        table.dataTable thead th{
+                                            font-weight: 650 !important;
+                                        }
+                                        table.dataTable thead th {
+                                            border-bottom: 1px solid #dcdcdc!important;
+                                        }
+                                        table.dataTable.no-footer {
+                                            border-bottom: 0px !important;
                                         }

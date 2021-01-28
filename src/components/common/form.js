@@ -8,6 +8,7 @@ import News from './../news';
 import Order from './../order';
 import Product from './../products';
 import Users from './../users';
+import Ov from './../overview';
 
 export default class Categoryx extends Component {
     render() {
@@ -18,7 +19,7 @@ export default class Categoryx extends Component {
                 {/* Sidebar */}
                 <ul className="navbar-nav bg-white sidebar sidebar-dark accordion" id="accordionSidebar">
                     {/* Sidebar - Brand */}
-                    <Link className="sidebar-brand d-flex align-items-center justify-content-center bg-top" href="index.html">
+                    <Link to="./" className="sidebar-brand d-flex align-items-center justify-content-center bg-top">
                     <div className="sidebar-brand-icon rotate-n-15">
                         <img className="logo" src="./img/logo.png" alt="" />
                     </div>
@@ -38,7 +39,7 @@ export default class Categoryx extends Component {
                     <li className="nav-item">
                     <Link to="./" className="nav-link" >
                         <i className="fas fa-fw fa-table" />
-                        <span>Bảng điều khiển</span></Link>
+                        <span>Tổng quan</span></Link>
                     </li>
                     <li className="nav-item">
                     <Link to="./nguoidung" className="nav-link" >
@@ -46,17 +47,22 @@ export default class Categoryx extends Component {
                         <span>người dùng</span></Link>
                     </li>
                     <li className="nav-item">
-                    <Link to="danhmuc" className="nav-link" >
+                    <Link to="./danhmuc" className="nav-link" >
                         <i className="fas fa-list-ol" />
                         <span>Danh mục</span></Link>
                     </li>
                     <li className="nav-item">
-                    <Link to="sanpham" className="nav-link">
+                    <Link to="./sanpham" className="nav-link">
                         <i className="fab fa-product-hunt" />
                         <span>Sản phẩm</span></Link>
                     </li>
                     <li className="nav-item">
-                    <Link to="baidang" className="nav-link">
+                    <Link to="./donhang" className="nav-link">
+                        <i className="fas fa-receipt" />
+                        <span>Đơn hàng</span></Link>
+                    </li>
+                    <li className="nav-item">
+                    <Link to="./baidang" className="nav-link">
                         <i className="fas fa-newspaper" />
                         <span>Bài đăng</span></Link>
                     </li>
@@ -205,8 +211,12 @@ export default class Categoryx extends Component {
                         <Route path="/nguoidung">
                             <Users/>
                         </Route>
+                        <Route path="/ov">
+                            <Ov/>
+                        </Route>
                         <Route path="/">
                             <Index/>
+                            {/* <Product/> */}
                         </Route>
                     </Switch>
                     {/* /.container-fluid */}

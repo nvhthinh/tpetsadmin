@@ -1,14 +1,20 @@
 // create.component.js
 import React, { Component } from 'react';
-
-// import Pr2 from "../../lib/pic/pr2.jpg";
-
-
+import $ from 'jquery';
 export default class News extends Component {
+  componentDidMount() {
+    //initialize datatable
+    $(document).ready(function () {
+        $('#dataTable').DataTable({
+          "aLengthMenu": [[15, 30, 50, 75, -1], [ 15, 30, 50, 75, "All"]],
+          "iDisplayLength": 15
+      });
+    });
+  }
     render() {
         return (
             <div className="container-fluid">
-              <style dangerouslySetInnerHTML={{__html: "\n        .devfake {\n            display: none !important;\n        }\n    " }} />
+              {/* <style dangerouslySetInnerHTML={{__html: "\n        .devfake {\n            display: none !important;\n        }\n    " }} /> */}
         {/* DataTales Example */}
         <div className="card shadow mb-4">
           <div className="card-body">
@@ -23,58 +29,96 @@ export default class News extends Component {
                 </thead>
                 <tbody>
                   <tr>
-                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Chào
-                      đón tháng năm rực rở/td&gt;
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">
+                    A STORY OF LONELY MAN - CÂU CHUYỆN CỦA TÔI
+                    </td><td>Giữa cuộc sống đầy bộn bề lo toan, giữa những áp lực vô hình tưởng chừng như nuốt trọn bạn </td>
+                    <td>25/04/2020</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">MÙA ĐÔNG KHÔNG LẠNH - SALE UP TO 50% NỆM, QUẦN ÁO
+                    </td><td>chương trình sale 50% các sản phẩm nệm và quần áo.</td>
+                    <td>25/12/2018</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Tuần lễ sale: Be mine - Người tình Valentinee
                     </td><td>Với hóa đơn thức ăn hạt có tổng trọng ... </td>
                     <td>25/04/2011</td>
                   </tr>
                   <tr>
-                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Chào
-                      đón tháng năm rực rở/td&gt;
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">3 ngày vàng xả hàng cực sốc lên đến 50%
+                    </td><td>Sen ơi tới ngay cửa hàng Cộng Hòa săn đồ cho Boss... </td>
+                    <td>12/02/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Samyang Animal Clinic - Bệnh viện thú y Hàn Quốc cao cấp mang chất lượng quốc tế
+                    </td><td>Với hóa đơn thức ăn hạt có tổng trọng ... </td>
+                    <td>25/02/2021</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Những lợi ích không ngờ của khi Spa cho chó cưng
+                    </td><td>Với hóa đơn thức ăn hạt có tổng trọng ... </td>
+                    <td>22/01/2011</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">GIẢI ĐÁP 5 CÂU HỎI VỀ SỨC KHỎE CỦA MÈO KHÔNG PHẢI AI CŨNG BIẾT
+                    </td><td>việc tiêm phòng còn giúp cho hệ miễn dịch của mèo con ... </td>
+                    <td>25/04/2017</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Spa cho chó cưng tại nhà
+                    </td><td>Với hóa đơn thức ăn hạt có tổng trọng ... </td>
+                    <td>15/11/2020</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Phương pháp điều trị và thuốc chữa nấm chó mèo
+                    </td><td>Nếu bệnh nấm cơ thể bao gồm một khu vực rộng lớn, nghiêm trọng... </td>
+                    <td>25/08/2020</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">
+                    A STORY OF LONELY MAN - CÂU CHUYỆN CỦA TÔI
+                    </td><td>Giữa cuộc sống đầy bộn bề lo toan, giữa những áp lực vô hình tưởng chừng như nuốt trọn bạn </td>
+                    <td>25/04/2020</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">MÙA ĐÔNG KHÔNG LẠNH - SALE UP TO 50% NỆM, QUẦN ÁO
+                    </td><td>chương trình sale 50% các sản phẩm nệm và quần áo.</td>
+                    <td>25/12/2018</td>
+                  </tr>
+                  <tr>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Tuần lễ sale: Be mine - Người tình Valentinee
                     </td><td>Với hóa đơn thức ăn hạt có tổng trọng ... </td>
                     <td>25/04/2011</td>
                   </tr>
                   <tr>
-                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Chào
-                      đón tháng năm rực rở/td&gt;
-                    </td><td>Với hóa đơn thức ăn hạt có tổng trọng ... </td>
-                    <td>25/04/2011</td>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">3 ngày vàng xả hàng cực sốc lên đến 50%
+                    </td><td>Sen ơi tới ngay cửa hàng Cộng Hòa săn đồ cho Boss... </td>
+                    <td>12/02/2011</td>
                   </tr>
                   <tr>
-                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Chào
-                      đón tháng năm rực rở/td&gt;
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Samyang Animal Clinic - Bệnh viện thú y Hàn Quốc cao cấp mang chất lượng quốc tế
                     </td><td>Với hóa đơn thức ăn hạt có tổng trọng ... </td>
-                    <td>25/04/2011</td>
+                    <td>25/02/2021</td>
                   </tr>
                   <tr>
-                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Chào
-                      đón tháng năm rực rở/td&gt;
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Những lợi ích không ngờ của khi Spa cho chó cưng
                     </td><td>Với hóa đơn thức ăn hạt có tổng trọng ... </td>
-                    <td>25/04/2011</td>
+                    <td>22/01/2011</td>
                   </tr>
                   <tr>
-                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Chào
-                      đón tháng năm rực rở/td&gt;
-                    </td><td>Với hóa đơn thức ăn hạt có tổng trọng ... </td>
-                    <td>25/04/2011</td>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">GIẢI ĐÁP 5 CÂU HỎI VỀ SỨC KHỎE CỦA MÈO KHÔNG PHẢI AI CŨNG BIẾT
+                    </td><td>việc tiêm phòng còn giúp cho hệ miễn dịch của mèo con ... </td>
+                    <td>25/04/2017</td>
                   </tr>
                   <tr>
-                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Chào
-                      đón tháng năm rực rở/td&gt;
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Spa cho chó cưng tại nhà
                     </td><td>Với hóa đơn thức ăn hạt có tổng trọng ... </td>
-                    <td>25/04/2011</td>
+                    <td>15/11/2020</td>
                   </tr>
                   <tr>
-                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Chào
-                      đón tháng năm rực rở/td&gt;
-                    </td><td>Với hóa đơn thức ăn hạt có tổng trọng ... </td>
-                    <td>25/04/2011</td>
-                  </tr>
-                  <tr>
-                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Chào
-                      đón tháng năm rực rở/td&gt;
-                    </td><td>Với hóa đơn thức ăn hạt có tổng trọng ... </td>
-                    <td>25/04/2011</td>
+                    <td className="main_item" data-toggle="modal" data-target="#detail_Modal">Phương pháp điều trị và thuốc chữa nấm chó mèo
+                    </td><td>Nếu bệnh nấm cơ thể bao gồm một khu vực rộng lớn, nghiêm trọng... </td>
+                    <td>25/08/2020</td>
                   </tr>
                 </tbody>
               </table>

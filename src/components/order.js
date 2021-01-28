@@ -1,14 +1,20 @@
 // create.component.js
 import React, { Component } from 'react';
-
-// import Pr2 from "../../lib/pic/pr2.jpg";
-
-
+import $ from 'jquery';
 export default class Order extends Component {
+  componentDidMount() {
+    //initialize datatable
+    $(document).ready(function () {
+        $('#dataTable').DataTable({
+          "aLengthMenu": [[15, 30, 50, 75, -1], [ 15, 30, 50, 75, "All"]],
+          "iDisplayLength": 15
+      });
+    });
+  }
     render() {
         return (
             <div className="container-fluid">
-              <style dangerouslySetInnerHTML={{__html: "\n        .devfake {\n            display: none !important;\n        }\n    " }} />
+              {/* <style dangerouslySetInnerHTML={{__html: "\n        .devfake {\n            display: none !important;\n        }\n    " }} /> */}
         {/* DataTales Example */}
         <div className="card shadow mb-4">
           <div className="card-body">

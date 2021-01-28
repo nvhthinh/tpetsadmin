@@ -25,9 +25,28 @@
 </head>
 
 <body class="bg_login" id="page-top">
+  <!-- Logout Modal-->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Bạn muốn đăng xuất?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Nhấn "Đăng xuất" để thoát khỏi hệ thống</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" href="./dangnhap">Đăng xuất</a>
+        </div>
+      </div>
+    </div>
+  </div>
   <div id="root"></div>
 
-  <div class="devfake" id="wrapper">
+  <div class="devfake" id="wrapper" style="display: none;">
 
     <!-- Sidebar -->
     <ul class="navbar-nav bg-white sidebar sidebar-dark accordion" id="accordionSidebar">
@@ -61,7 +80,7 @@
       <li class="nav-item">
         <a class="nav-link" href="./">
           <i class="fas fa-fw fa-table"></i>
-          <span>Bảng điều khiển</span></a>
+          <span>Tổng quan</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/nguoidung">
@@ -77,6 +96,11 @@
         <a class="nav-link" href="sanpham">
           <i class="fab fa-product-hunt"></i>
           <span>Sản phẩm</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="donhang">
+          <i class="fas fa-receipt"></i>
+          <span>Đơn hàng</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="baidang">
@@ -373,26 +397,7 @@
   <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
   </a>
-
-  <!-- Logout Modal-->
-  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Bạn muốn đăng xuất?</h5>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
-        </div>
-        <div class="modal-body">Nhấn "Đăng xuất" để thoát khỏi hệ thống</div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="./login">Logout</a>
-        </div>
-      </div>
-    </div>
-  </div>
+  <!-- Bootstrap core JavaScript-->
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
